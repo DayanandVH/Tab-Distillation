@@ -34,7 +34,10 @@ Our approach uses **Distribution Matching (DM)** to distill tabular datasets, ge
 ### Experimental Setup
 We evaluated DM on six financial tabular datasets, with categorical attributes encoded and numerical attributes standardized. Our benchmarks included methods like random selection, herding, forgetting, and SMOTE.
 
-### Baseline Comparison Table
+### Dataset Description
+
+![Class Separation](datasets.png)
+
 | Method            | Mean Accuracy | F1-Score | TPR |
 |-------------------|---------------|----------|-----|
 | Full Dataset      | 0.75          | 0.65     | 0.7 |
@@ -43,7 +46,7 @@ We evaluated DM on six financial tabular datasets, with categorical attributes e
 ### Class Separation Visualization
 Distilled data offers clearer class separation, improving **True Positive Rate (TPR)**. The figure below illustrates this effect.
 
-![Class Separation](images/class-separation.png) <!-- Update with actual image -->
+![Class Separation](Toy_Data_Visualization.png) <!-- Update with actual image -->
 
 ---
 
@@ -51,11 +54,19 @@ Distilled data offers clearer class separation, improving **True Positive Rate (
 ### Performance Comparison
 DM outperforms other methods, achieving better accuracy and F1-score.
 
+![Class Separation](od_comparison_results.png)
+
 ### Pruning Resiliency
 Even with up to 75% feature removal, distilled datasets maintain high F1-scores, demonstrating robustness.
 
+![Class Separation](Feature_Correlation.png)
+
+![Class Separation](Robustness_Result_for_model_MLP_Metric_F11.png)
+
 ### Cross-Model Generalization
 DM generalizes well across model types, including **Random Forest**, **Decision Tree**, and **Logistic Regression**.
+
+![Class Separation](cross_model_generalization.png)
 
 ---
 
@@ -81,7 +92,7 @@ DM generalizes well across model types, including **Random Forest**, **Decision 
 ---
 
 ## Contact
-![Dayananda Herurkar](images/author-photo.jpg) <!-- Update with actual image -->
+![Dayananda Herurkar](Dayananda Herurkar.jpg) <!-- Update with actual image -->
 **Dayananda Herurkar**  
 PhD Student, German Research Center for Artificial Intelligence (DFKI)  
 Email: dayananda.herurkar@dfki.de  
